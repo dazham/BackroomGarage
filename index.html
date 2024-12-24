@@ -1,153 +1,153 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Primary Meta Tags -->
-    <meta name="title" content="OpenDeck">
-    <meta name="description" content="sharing resources">
-    <title>OpenDeck</title>
+    <meta name="title" content="OpenDock">
+    <meta name="description" content="sharing resources across the internet">
 
-    <!-- Favicon -->
-    <link rel="icon" href="icon.png" type="image/x-icon">
+    <style type="text/css">
+    h1 {
+        display: flex; /* Use flexbox to align the image and text */
+        align-items: center; /* Vertically center the image and text */
+        gap: 10px; /* Add some space between the icon and text */
+        position: relative;
+    }
 
-        <style type="text/css">
-            /* Apply flexbox to body for full-screen centering */
-            body, html {
-                height: 100%; /* Ensure the body and html take up the full height of the screen */
-                margin: 0; /* Remove default margin */
-                display: flex; /* Use flexbox for centering */
-                justify-content: center; /* Horizontally center the content */
-                align-items: center; /* Vertically center the content */
-            }
+    @-webkit-keyframes swing {
+        0% {
+            -webkit-transform: translate3d(0, 0, 100px);
+            transform: translate3d(0, 0, 100px);
+        }
+        100% {
+            -webkit-transform: translate3d(15px, 0, 100px);
+            transform: translate3d(15px, 0, 100px);
+        }
+    }
 
-            /* Main content box */
-            main {
-                width: 550px; /* Fixed width for the content box */
-                padding: 0 15px;
-                border: 1px solid #000;
-                transform-style: preserve-3d;
-                box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            }
+    @keyframes swing {
+        0% {
+            -webkit-transform: translate3d(0, 0, 100px);
+            -ms-transform: translate3d(0, 0, 100px);
+            transform: translate3d(0, 0, 100px);
+        }
+        100% {
+            -webkit-transform: translate3d(15px, 0, 100px);
+            transform: translate3d(15px, 0, 100px);
+        }
+    }
 
-            /* Style the h1 to align the image and text */
-            h1 {
-                display: flex; /* Use flexbox to align the image and text */
-                align-items: center; /* Vertically center the image and text */
-                gap: 10px; /* Add some space between the icon and text */
-                position: relative;
-            }
+    .swing {
+        -webkit-animation-name: swing;
+        animation-name: swing;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-direction: alternate-reverse;
+        animation-direction: alternate-reverse;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
 
-            h1 img {
-                width: 1em; /* Set the width of the icon to match the font size */
-                height: auto; /* Maintain aspect ratio */
-            }
+    body {
+        padding: 20px;
+    }
 
-            /* Other styles remain the same */
-            @-webkit-keyframes swing {
-                0% {
-                    -webkit-transform: translate3d(0, 0, 100px);
-                    transform: translate3d(0, 0, 100px);
-                }
+    body, h1, h2 {
+        font-family: Courier, monospace;
+        font-size: 16px;
+        font-weight: 400;
+    }
 
-                100% {
-                    -webkit-transform: translate3d(15px, 0, 100px);
-                    transform: translate3d(15px, 0, 100px);
-                }
-            }
+    h1 {
+        left: 0;
+    }
 
-            @keyframes swing {
-                0% {
-                    -webkit-transform: translate3d(0, 0, 100px);
-                    -ms-transform: translate3d(0, 0, 100px);
-                    transform: translate3d(0, 0, 100px);
-                }
+    strong {
+        font-weight: 700;
+    }
 
-                100% {
-                    -webkit-transform: translate3d(15px, 0, 100px);
-                    transform: translate3d(15px, 0, 100px);
-                }
-            }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul ul {
+        margin-left: 20px;
+    }
 
-            .swing {
-                -webkit-animation-name: swing;
-                animation-name: swing;
-                -webkit-animation-duration: 0.3s;
-                animation-duration: 0.3s;
-                -webkit-animation-direction: alternate-reverse;
-                animation-direction: alternate-reverse;
-                -webkit-animation-timing-function: ease-in-out;
-                animation-timing-function: ease-in-out;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-            }
+    ul ul ul {
+        margin-left: 20px;
+    }
 
-            body {
-                padding: 20px;
-            }
+    ul {
+        margin-top: 0; /* Remove margin above the list */
+        padding-top: 0; /* Remove padding */
+        }
 
-            body, h1, h2 {
-                font-family: Courier, monospace;
-                font-size: 16px;
-                font-weight: 400;
-            }
+    main {
+        border: 1px solid #000;
+        padding: 0 15px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
 
-            h1 {
-                left: 0;
-            }
+    p, h2, ul, summary {
+        line-height: 1.5;
+        -webkit-transform: translateZ(100px);
+        transform: translateZ(100px);
+    }
 
-            strong {
-                font-weight: 700;
-            }
+    h2 {
+        margin-top: 0; /* Remove margin above the heading */
+        margin-bottom: 0.5em; /* Optional: reduce space below the heading */
+    }
 
-            ul {
-                list-style: none;
-                padding: 0;
-            }
+    h1 img {
+        width: 1em; /* Set the width of the icon to match the font size */
+        height: auto; /* Maintain aspect ratio */
+    }
 
-            ul ul {
-                margin-left: 20px;
-            }
+    .unreleased {
+        opacity: 0.5;
+        filter: blur(2px);
+    }
 
-            ul ul ul {
-                margin-left: 20px;
-            }
+    @media only screen and (min-width: 45em) {
+        body {
+            padding-bottom: 10em;
+        }
+        
+        main {
+            width: 550px;
+            position: absolute;
+            top: 5em;
+            left: 25%;
+        }
+    }
+</style>
 
-            p, h2, ul, summary {
-                line-height: 1.5;
-                -webkit-transform: translateZ(100px);
-                transform: translateZ(100px);
-            }
 
-            .unreleased {
-                opacity: 0.5;
-                filter: blur(2px);
-            }
 
-            @media only screen and (min-width: 45em) {
-                body {
-                    padding-bottom: 10em;
-                }
 
-                main {
-                    width: 590px; /* Fixed width for larger screens */
-                }
-            }
 
-            h2 {
-                margin-top: 0; /* Remove margin above the heading */
-                margin-bottom: 0.5em; /* Optional: reduce space below the heading */
-            }
 
-            ul {
-                margin-top: 0; /* Remove margin above the list */
-                padding-top: 0; /* Remove padding */
-            }
 
-        </style>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <title>evan magoni</title>
 </head>
-
 <body>
     <main>
         <h1 class="swing"><img src="icon.png" alt="Icon"> <strong>OpenDeck</strong> - sharing helpful resources</h1>
@@ -313,19 +313,7 @@
         <hr style="margin: px 0; border: none; border-top: 1px solid #000;">
         <p style="text-align: center;"><strong></strong> I do not own or am associated with any of these sites. <br> 
     </main>
-
-
-    <script>
-        var t = document.getElementsByTagName('main')[0];
-        document.documentElement.onmousemove = function(e) {
-            t.style.webkitTransform = t.style.transform = 'rotate3d(10, 180, -6, ' + e.pageX / -100 + 'deg)';
-        };
-    </script>
-
-    
+<script>var t=document.getElementsByTagName('main')[0];document.documentElement.onmousemove=function(e){t.style.webkitTransform=t.style.transform='rotate3d(10, 180, -6, '+e.pageX/-20+'deg)';};</script>
 </body>
 </html>
-
-<!-- Email <a href='mailto:dazhamdev@gmail.com'>dazhamdev@gmail.com</a> to take any links down. -->
-
 
