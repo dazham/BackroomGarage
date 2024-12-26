@@ -11,309 +11,171 @@
 
     <!-- Favicon -->
     <link rel="icon" href="icon.png" type="image/x-icon">
-
-        <style type="text/css">
-            /* Apply flexbox to body for full-screen centering */
-            body, html {
-                height: 100%; /* Ensure the body and html take up the full height of the screen */
-                margin: 0; /* Remove default margin */
-                display: flex; /* Use flexbox for centering */
-                justify-content: center; /* Horizontally center the content */
-                align-items: center; /* Vertically center the content */
-            }
-
-            /* Main content box */
-            main {
-                width: 550px; /* Fixed width for the content box */
-                padding: 0 15px;
-                border: 1px solid #000;
-                transform-style: preserve-3d;
-                box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            }
-
-            /* Style the h1 to align the image and text */
-            h1 {
-                display: flex; /* Use flexbox to align the image and text */
-                align-items: center; /* Vertically center the image and text */
-                gap: 10px; /* Add some space between the icon and text */
-                position: relative;
-            }
-
-            h1 img {
-                width: 1em; /* Set the width of the icon to match the font size */
-                height: auto; /* Maintain aspect ratio */
-            }
-
-            /* Other styles remain the same */
-            @-webkit-keyframes swing {
-                0% {
-                    -webkit-transform: translate3d(0, 0, 100px);
-                    transform: translate3d(0, 0, 100px);
-                }
-
-                100% {
-                    -webkit-transform: translate3d(15px, 0, 100px);
-                    transform: translate3d(15px, 0, 100px);
-                }
-            }
-
-            @keyframes swing {
-                0% {
-                    -webkit-transform: translate3d(0, 0, 100px);
-                    -ms-transform: translate3d(0, 0, 100px);
-                    transform: translate3d(0, 0, 100px);
-                }
-
-                100% {
-                    -webkit-transform: translate3d(15px, 0, 100px);
-                    transform: translate3d(15px, 0, 100px);
-                }
-            }
-
-            .swing {
-                -webkit-animation-name: swing;
-                animation-name: swing;
-                -webkit-animation-duration: 0.3s;
-                animation-duration: 0.3s;
-                -webkit-animation-direction: alternate-reverse;
-                animation-direction: alternate-reverse;
-                -webkit-animation-timing-function: ease-in-out;
-                animation-timing-function: ease-in-out;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-            }
-
-            body {
-                padding: 20px;
-            }
-
-            body, h1, h2 {
-                font-family: Courier, monospace;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            h1 {
-                left: 0;
-            }
-
-            strong {
-                font-weight: 700;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            ul ul {
-                margin-left: 20px;
-            }
-
-            ul ul ul {
-                margin-left: 20px;
-            }
-
-            p, h2, ul, summary {
-                line-height: 1.5;
-                -webkit-transform: translateZ(100px);
-                transform: translateZ(100px);
-            }
-
-            .unreleased {
-                opacity: 0.5;
-                filter: blur(2px);
-            }
-
-            @media only screen and (min-width: 45em) {
-                body {
-                    padding-bottom: 10em;
-                }
-
-                main {
-                    width: 590px; /* Fixed width for larger screens */
-                }
-            }
-
-            h2 {
-                margin-top: 0; /* Remove margin above the heading */
-                margin-bottom: 0.5em; /* Optional: reduce space below the heading */
-            }
-
-            ul {
-                margin-top: 0; /* Remove margin above the list */
-                padding-top: 0; /* Remove padding */
-            }
-
-        </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
         <h1 class="swing"><img src="icon.png" alt="Icon"> <strong>OpenDeck</strong> - sharing helpful resources</h1>
-        
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qYaKzpMdBaM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+        <iframe src="https://www.youtube.com/embed/qYaKzpMdBaM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <summary><strong>Notice:</strong></summary>
         <ul>
-            
-            <li>⚠️<a>Highly recommended to use uBlockOrigin and have windows defender turned on for windows users</a> 
-            </li>
-            </li>
+            <li>⚠️<a>Highly recommended to use uBlockOrigin and have Windows Defender turned on for Windows users</a></li>
             <li>⭐<a>Links with stars next to them are the best sources</a>
-            <p style="color: #383737; font-size: 24px; font-weight: bold; font-family: Courier, monospace; text-align: left;">Search : Ctrl + F</p>
-
+                <p style="color: #383737; font-size: 24px; font-weight: bold; font-family: Courier, monospace; text-align: left;">Search : Ctrl + F</p>
             </li>
-            <p></p>
-            <details>
-                <summary><strong>Adblockers</strong></summary>
-                <ul>
-                    <details>
-                        <summary><em>Browser</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://ublockorigin.com/">uBlockOrigin</a>⭐</li>
-                            <li><a target="_blank" href="https://adblockplus.org/">AdBlockPlus</a></li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>Spotify</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://github.com/mrpond/BlockTheSpot">BlockTheSpot</a>⭐</li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>Twitch</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://github.com/pixeltris/TwitchAdSolutions">Twitch Ad Solutions</a>⭐</li>
-                        </ul>
-                    </details>
-                </ul>
-            </details>
-            
 
-            <details>
-                <summary><strong>Streaming Services</strong></summary>
-                <ul>
-                    <details>
-                        <summary><em>Movies & Shows</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://fmovies-hd.to/home/">fmovies</a>⭐</li>
-                            <li><a target="_blank" href="https://bflix.sh/home/">bflix</a></li>
-                            <li><a target="_blank" href="https://www.vidbinge.com/">vidbinge</a></li>
-                            <li><a target="_blank" href="https://novafork.com/">novafork</a></li>
-                            <li><a target="_blank" href="https://www.popcornmovies.to/home">popcornmovies</a></li>
-                            <li><a target="_blank" href="https://broflix.cc/">broflix</a></li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>Anime</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://aniwatchtv.to/home">Aniwatch</a>⭐</li>
-                            <li><a target="_blank" href="https://hianime.to/home">Hianime</a></li>
-                            <li><a target="_blank" href="https://kaido.to/home">Kaido</a></li>
-                            <li><a target="_blank" href="https://anicrush.to/home">Anicrush</a></li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>LIVE TV</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://thetvapp.to/">The TV App</a></li>
-                            <li><a target="_blank" href="https://tv247.us/all-channels/">TV247</a></li>
-                            <li><a target="_blank" href="https://usatvgo.live/">USATVGO</a></li>
-                            <li><a target="_blank" href="https://en12.sportplus.live/">SportPlus</a></li>
-                            <li><a target="_blank" href="https://v2.sportsurge.net/home4/">Sportsurge</a></li>
-                            <li><a target="_blank" href="https://the.streameast.app/v86">StreamEast</a>⭐</li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>Cartoon</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://www.wco.tv/">WCO</a>⭐</li>
-                            <li><a target="_blank" href="https://kimcartoon.si/">KimCartoon</a></li>
-                            <li><a target="_blank" href="https://kisscartoon.nz/">KissCartoon</a></li>
-                            <li><a target="_blank" href="https://www.topcartoons.tv/">TopCartoons</a></li>
-                            <li><a target="_blank" href="https://www1.watchcartoononline.bz/">WatchCartoonOnline</a></li>
-                            <li><a target="_blank" href="https://www.supercartoons.net/">SuperCartoons</a></li>
-                            <li><a target="_blank" href="https://www.funniermoments.net/">FunnierMoments</a></li>
-                            <li><a target="_blank" href="https://www.b98.tv/home/">B98 TV</a></li>
-                            <li><a target="_blank" href="https://www.toonamiaftermath.com/">Toonami Aftermath</a></li>
-                        </ul>
-                    </details>
-                </ul>
-            </details>
-            
-            
-
-            <details>
-                <summary><strong>Games</strong></summary>
-                <ul>
-                    <li><a target="_blank" href="https://steamrip.com/">SteamRIP</a>⭐</li>
-                    <li><a target="_blank" href="https://steamunlocked.net/">SteamUnlocked</a></li>
-                    <li><a target="_blank" href="https://online-fix.me/">Online-Fix</a></li>
-                    <li><a target="_blank" href="https://gog-games.to/">GOG Games</a></li>
-                    <li><a target="_blank" href="https://gamebounty.world/">GameBounty</a></li>
-                    <li><a target="_blank" href="https://www.ovagames.com/">OVA Games</a>⭐</li>
-                    <li><a target="_blank" href="https://forum.torrminatorr.com/">Torrminatorr Forum</a></li>
-                    <li><a target="_blank" href="https://www.freetogame.com/games">FreeToGame</a></li>
-                    <li><a target="_blank" href="https://ankergames.net/">AnkerGames</a></li>
-                </ul>
-            </details>
-            
-
-            <details>
-                <summary><strong>Softwares</strong></summary>
-                <ul>
-                    <details>
-                        <summary><em>Adobe</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://drive.google.com/drive/u/0/folders/1zBMeVvcDWTtzROlUmONmD0-JfpEb0tb8">2022 Collection Drive</a></li>
-                            <li><a target="_blank" href="https://getintopc.com/">GetintoPC</a></li>
-                            <li><a target="_blank" href="https://www.reddit.com/r/GenP/">GenP</a>⭐</li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary><em>Other Software Sites</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://getintopc.com/">GetintoPC</a></li>
-                        </ul>
-                    </details>
-                </ul>
+                <portion>
+                <details>
+                    <summary><strong>Adblockers</strong></summary>
+                    <ul>
+                        <details>
+                            <summary><em>Browser</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://ublockorigin.com/">uBlockOrigin</a>⭐</li>
+                                <li><a target="_blank" href="https://adblockplus.org/">AdBlockPlus</a></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>Spotify</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/mrpond/BlockTheSpot">BlockTheSpot</a>⭐</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>Twitch</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/pixeltris/TwitchAdSolutions">Twitch Ad Solutions</a>⭐</li>
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
                 
-            </details>
-
-            <details>
-                <summary><strong>Video & Audio Downloader</strong></summary>
-                <ul>
-                    <li><a target="_blank" href="https://steamrip.com/">Cobalt</a>⭐</li>
-                </ul>
-            </details>
-
-            <details>
-                <summary><strong>Reading</strong></summary>
-                <ul>
-                    <details>
-                        <summary><em>Manga</em></summary>
-                        <ul>
-                            <li><a target="_blank" href="https://mangadex.org/">MangaDex</a></li>
-                            <li><a target="_blank" href="https://mangareader.to/home">Mangareader</a>⭐</li>
-                            <li><a target="_blank" href="https://asuracomic.net/">AsuraComic</a></li>
-                        </ul>
-                    </details>
-                    
-                </ul>
-            </details>
-        </ul>
-
         
+                <details>
+                    <summary><strong>Streaming Services</strong></summary>
+                    <ul>
+                        <details>
+                            <summary><em>Movies & Shows</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://fmovies-hd.to/home/">fmovies</a>⭐</li>
+                                <li><a target="_blank" href="https://bflix.sh/home/">bflix</a></li>
+                                <li><a target="_blank" href="https://www.vidbinge.com/">vidbinge</a></li>
+                                <li><a target="_blank" href="https://novafork.com/">novafork</a></li>
+                                <li><a target="_blank" href="https://www.popcornmovies.to/home">popcornmovies</a></li>
+                                <li><a target="_blank" href="https://broflix.cc/">broflix</a></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>Anime</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://aniwatchtv.to/home">Aniwatch</a>⭐</li>
+                                <li><a target="_blank" href="https://hianime.to/home">Hianime</a></li>
+                                <li><a target="_blank" href="https://kaido.to/home">Kaido</a></li>
+                                <li><a target="_blank" href="https://anicrush.to/home">Anicrush</a></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>LIVE TV</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://thetvapp.to/">The TV App</a></li>
+                                <li><a target="_blank" href="https://tv247.us/all-channels/">TV247</a></li>
+                                <li><a target="_blank" href="https://usatvgo.live/">USATVGO</a></li>
+                                <li><a target="_blank" href="https://en12.sportplus.live/">SportPlus</a></li>
+                                <li><a target="_blank" href="https://v2.sportsurge.net/home4/">Sportsurge</a></li>
+                                <li><a target="_blank" href="https://the.streameast.app/v86">StreamEast</a>⭐</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>Cartoon</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://www.wco.tv/">WCO</a>⭐</li>
+                                <li><a target="_blank" href="https://kimcartoon.si/">KimCartoon</a></li>
+                                <li><a target="_blank" href="https://kisscartoon.nz/">KissCartoon</a></li>
+                                <li><a target="_blank" href="https://www.topcartoons.tv/">TopCartoons</a></li>
+                                <li><a target="_blank" href="https://www1.watchcartoononline.bz/">WatchCartoonOnline</a></li>
+                                <li><a target="_blank" href="https://www.supercartoons.net/">SuperCartoons</a></li>
+                                <li><a target="_blank" href="https://www.funniermoments.net/">FunnierMoments</a></li>
+                                <li><a target="_blank" href="https://www.b98.tv/home/">B98 TV</a></li>
+                                <li><a target="_blank" href="https://www.toonamiaftermath.com/">Toonami Aftermath</a></li>
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
+                
+                
+        
+                <details>
+                    <summary><strong>Games</strong></summary>
+                    <ul>
+                        <li><a target="_blank" href="https://steamrip.com/">SteamRIP</a>⭐</li>
+                        <li><a target="_blank" href="https://steamunlocked.net/">SteamUnlocked</a></li>
+                        <li><a target="_blank" href="https://online-fix.me/">Online-Fix</a></li>
+                        <li><a target="_blank" href="https://gog-games.to/">GOG Games</a></li>
+                        <li><a target="_blank" href="https://gamebounty.world/">GameBounty</a></li>
+                        <li><a target="_blank" href="https://www.ovagames.com/">OVA Games</a>⭐</li>
+                        <li><a target="_blank" href="https://forum.torrminatorr.com/">Torrminatorr Forum</a></li>
+                        <li><a target="_blank" href="https://www.freetogame.com/games">FreeToGame</a></li>
+                        <li><a target="_blank" href="https://ankergames.net/">AnkerGames</a></li>
+                    </ul>
+                </details>
+                
+        
+                <details>
+                    <summary><strong>Softwares</strong></summary>
+                    <ul>
+                        <details>
+                            <summary><em>Adobe</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://drive.google.com/drive/u/0/folders/1zBMeVvcDWTtzROlUmONmD0-JfpEb0tb8">2022 Collection Drive</a></li>
+                                <li><a target="_blank" href="https://getintopc.com/">GetintoPC</a></li>
+                                <li><a target="_blank" href="https://www.reddit.com/r/GenP/">GenP</a>⭐</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><em>Other Software Sites</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://getintopc.com/">GetintoPC</a></li>
+                            </ul>
+                        </details>
+                    </ul>
+                    
+                </details>
+        
+                <details>
+                    <summary><strong>Video & Audio Downloader</strong></summary>
+                    <ul>
+                        <li><a target="_blank" href="https://steamrip.com/">Cobalt</a>⭐</li>
+                    </ul>
+                </details>
+        
+                <details>
+                    <summary><strong>Reading</strong></summary>
+                    <ul>
+                        <details>
+                            <summary><em>Manga</em></summary>
+                            <ul>
+                                <li><a target="_blank" href="https://mangadex.org/">MangaDex</a></li>
+                                <li><a target="_blank" href="https://mangareader.to/home">Mangareader</a>⭐</li>
+                                <li><a target="_blank" href="https://asuracomic.net/">AsuraComic</a></li>
+                            </ul>
+                        </details>
+                        
+                    </ul>
+                </details>
+            </ul>
+                </portion>
 
+
+            <!-- Content continues as is -->
+        </ul>
+        
         <p>📩 <a href="https://forms.gle/pK4AZzJm8bU78gXJ7">Feedbacks & Suggestions</a></p>
-        <!-- <p>Send feedback & suggestions here: <a target="_blank" href="https://forms.gle/pK4AZzJm8bU78gXJ7">click this</a></p>-->
         <hr style="margin: px 0; border: none; border-top: 1px solid #000;">
-        <p style="text-align: center;"><strong></strong> I am not associated with any of these sites. <br> 
+        <p style="text-align: center;"><strong></strong> I am not associated with any of these sites.<br>
     </main>
-
 
     <script>
         var t = document.getElementsByTagName('main')[0];
@@ -321,9 +183,5 @@
             t.style.webkitTransform = t.style.transform = 'rotate3d(10, 180, -6, ' + e.pageX / -100 + 'deg)';
         };
     </script>
-
-    
 </body>
 </html>
-
-<!-- Email <a href='mailto:dazhamdev@gmail.com'>dazhamdev@gmail.com</a> to take any links down. -->
