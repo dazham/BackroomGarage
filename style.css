@@ -1,144 +1,165 @@
+/* style.css */
+html {
+    height: 100%;
+    margin: 0;
+}
 
-        /* Apply flexbox to body for full-screen centering */
-        body, html {
-            height: 100%; /* Ensure the body and html take up the full height of the screen */
-            margin: 0; /* Remove default margin */
-            display: flex; /* Use flexbox for centering */
-            justify-content: center; /* Horizontally center the content */
-            align-items: center; /* Vertically center the content */
-        }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Courier, monospace;
+    font-size: 16px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        /* Main content box */
-        main {
-            width: 90%; /* Use percentage for responsive design */
-            max-width: 550px; /* Maximum width to maintain consistency on larger screens */
-            padding: 0 15px;
-            border: 1px solid #000;
-            transform-style: preserve-3d;
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-        }
+main {
+    width: 90%;
+    max-width: 550px;
+    padding: 0 15px;
+    border: 1px solid #000;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    margin-top: 20px;
+}
 
-        /* Style the h1 to align the image and text */
-        h1 {
-            display: flex; /* Use flexbox to align the image and text */
-            align-items: center; /* Vertically center the image and text */
-            gap: 10px; /* Add some space between the icon and text */
-            position: relative;
-        }
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: 0;
+    font-size: 1em;
+}
 
-        h1 img {
-            width: 1em; /* Set the width of the icon to match the font size */
-            height: auto; /* Maintain aspect ratio */
-        }
+h1 img {
+    width: 1em;
+    height: auto;
+}
 
-        /* Other styles remain the same */
-        @-webkit-keyframes swing {
-            0% {
-                -webkit-transform: translate3d(0, 0, 100px);
-                transform: translate3d(0, 0, 100px);
-            }
+.swing {
+    animation: swing 0.3s alternate-reverse ease-in-out infinite;
+}
 
-            100% {
-                -webkit-transform: translate3d(15px, 0, 100px);
-                transform: translate3d(15px, 0, 100px);
-            }
-        }
+@keyframes swing {
+    0% {
+        transform: translate3d(0, 0, 100px);
+    }
+    100% {
+        transform: translate3d(15px, 0, 100px);
+    }
+}
 
-        @keyframes swing {
-            0% {
-                -webkit-transform: translate3d(0, 0, 100px);
-                -ms-transform: translate3d(0, 0, 100px);
-                transform: translate3d(0, 0, 100px);
-            }
+strong {
+    font-weight: 700;
+}
 
-            100% {
-                -webkit-transform: translate3d(15px, 0, 100px);
-                transform: translate3d(15px, 0, 100px);
-            }
-        }
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
 
-        .swing {
-            -webkit-animation-name: swing;
-            animation-name: swing;
-            -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
-            -webkit-animation-direction: alternate-reverse;
-            animation-direction: alternate-reverse;
-            -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-        }
+ul ul {
+    margin-left: 20px;
+}
 
-        body {
-            padding: 20px;
-        }
+p, h2, ul, summary, span {
+    line-height: 1.5;
+    transform: translateZ(100px);
+    transition: color 0.3s ease;
+}
 
-        body, h1, h2 {
-            font-family: Courier, monospace;
-            font-size: 16px;
-            font-weight: 400;
-        }
+h2 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+}
 
-        h1 {
-            left: 0;
-        }
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
 
-        strong {
-            font-weight: 700;
-        }
+.unreleased {
+    opacity: 0.5;
+    filter: blur(2px);
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #eee;
+}
 
-        ul ul {
-            margin-left: 20px;
-        }
+body.dark-mode main {
+    border-color: #eee; /* White border in dark mode */
+}
 
-        ul ul ul {
-            margin-left: 20px;
-        }
+body.dark-mode a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
 
-        p, h2, ul, summary {
-            line-height: 1.5;
-            -webkit-transform: translateZ(100px);
-            transform: translateZ(100px);
-        }
+body.dark-mode a:hover {
+    color: #4eafff;
+}
 
-        .unreleased {
-            opacity: 0.5;
-            filter: blur(2px);
-        }
+/* Light Mode Link Styles */
+a {
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+}
 
-        h2 {
-            margin-top: 0; /* Remove margin above the heading */
-            margin-bottom: 0.5em; /* Optional: reduce space below the heading */
-        }
+a:hover {
+    color: rgb(255, 0, 0);
+}
 
-        ul {
-            margin-top: 0; /* Remove margin above the list */
-            padding-top: 0; /* Remove padding */
-        }
+@media (min-width: 45em) {
+    main {
+        max-width: 590px;
+    }
+}
 
-        iframe {
-            width: 100%; /* Make the iframe responsive */
-            height: auto; /* Maintain aspect ratio */
-            aspect-ratio: 16/9; /* Use aspect ratio for responsiveness */
-        }
+@media (max-width: 768px) {
+    h1 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
-        @media only screen and (min-width: 45em) {
-            main {
-                max-width: 590px; /* Slightly larger width for larger screens */
-            }
-        }
+/* Theme Toggle Button Styles */
+#theme-toggle-container {
+    display: flex;
+    justify-content: right; /* Align  */
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
 
-        @media only screen and (max-width: 768px) {
-            h1 {
-                flex-direction: column; /* Stack the image and text for smaller screens */
-                text-align: center;
-            }
-        }
+#theme-toggle {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: transparent;
+    font-family: Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    transform: translateZ(100px);
+}
 
-    
+body.dark-mode #theme-toggle {
+    border-color: #eee; /* White border in dark mode */
+    color: #eee;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
