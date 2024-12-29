@@ -9,27 +9,30 @@
     <title>OpenDeck</title>
     <link rel="icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 
 <body>
+    
     <main>
         <h1 class="swing"><img src="icon.png" alt="Icon"> <strong>OpenDeck</strong> - sharing helpful resources</h1>
 
-        <iframe src="https://www.youtube.com/embed/qYaKzpMdBaM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/qYaKzpMdBaM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <summary><strong>Notice:</strong></summary>
-        <ul>
-            <li>⚠️<a>Highly recommended to use uBlockOrigin or other browser adblockers.</a></li>
 
-            <p style="color: #383737; font-size: 24px; font-weight: bold; font-family: Courier, monospace; text-align: left; text-decoration: underline; margin-bottom: 0.5em;">Main Sources:</p>
-            <ul>
-                <li>🔗<a href="https://fmhy.net" target="_blank">FMHY.net</a> (recommended)</li>
-                <li>🔗<a href="https://www.reddit.com/r/Piracy/" target="_blank">r/Piracy</a></li>
-                <li>🔗<a href="https://www.reddit.com/r/GenP/" target="_blank">r/GenP</a></li>
-            </ul>
 
-            <p style="color: #383737; font-size: 18px; font-weight: bold; font-family: Courier, monospace; text-align: left; text-decoration: underline; margin-bottom: 0.5em;">Featured Links:</p>
-            <div style="margin-top: 0;">
+    <summary><strong>Notice:</strong></summary>
+    <ul>
+      <li>⚠️<span>Highly recommended to use uBlockOrigin or other browser adblockers.</span></li>
+
+      <p style="color: #ff0000; font-size: 24px; font-weight: bold; font-family: Courier, monospace; text-align: left; text-decoration: underline; margin-bottom: 0.5em;">Main Sources:</p>
+      <ul>
+        <li>🔗<a href="https://fmhy.net" target="_blank">FMHY.net</a> (recommended)</li>
+        <li>🔗<a href="https://www.reddit.com/r/Piracy/" target="_blank">r/Piracy</a></li>
+        <li>🔗<a href="https://www.reddit.com/r/GenP/" target="_blank">r/GenP</a></li>
+      </ul>
+      
+      <p style="color: #ff0000; font-size: 18px; font-weight: bold; font-family: Courier, monospace; text-align: left; text-decoration: underline; margin-bottom: 0.5em;">Featured Links:</p>
+      <div style="margin-top: 0;">
                 <portion>
 
                     <details>
@@ -132,11 +135,19 @@
 
                 </portion>
             </div>
+
+            <br>
+            <div id="theme-toggle-container"> <button id="theme-toggle">Theme: 🔆/🌙 </button> </div>
+
+            <p style="text-align: right;"> <a href="https://forms.gle/pK4AZzJm8bU78gXJ7">Feedbacks & Suggestions</a></p>
+
         </ul>
 
-        <p>📩 <a href="https://forms.gle/pK4AZzJm8bU78gXJ7">Feedbacks & Suggestions</a></p>
         <hr style="margin: px 0; border: none; border-top: 1px solid #000;">
-        <p style="text-align: center;"><strong></strong> This Site is a Work in Progress....<br>
+    <p style="text-align: center;"><strong></strong> This Site is a Work in Progress....<br>
+    </p>
+
+            
     </main>
 
     <script>
@@ -144,6 +155,25 @@
         document.documentElement.onmousemove = function(e) {
             t.style.webkitTransform = t.style.transform = 'rotate3d(10, 180, -6, ' + e.pageX / -100 + 'deg)';
         };
+
+        const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        // Save theme preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            localStorage.setItem('theme', ''); //remove the dark mode class from local storage
+        }
+    });
     </script>
 </body>
 </html>
