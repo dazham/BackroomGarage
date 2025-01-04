@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Neue+Pixel+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Source code pro, monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: #eee;
+    background-color: #0a0014;
+}
+
+main {
+    width: 90%;
+    max-width: 550px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Courier, monospace;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h1 img {
+    width: auto;
+    height: 48px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+p, h2, ul, summary, span, li {
+    line-height: 1.5;
+}
+
+h2 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff73ff;
+}
+
+@media (min-width: 45em) {
+    main {
+        max-width: 590px;
+    }
+}
+
+/* Ticker Styles */
+/* ... other styles ... */
+
+.ticker-wrap {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(19, 0, 19, 0.7);
+    white-space: nowrap;
+}
+
+.top-ticker {
+    top: 0;
+    border-bottom: 1px solid rgb(98, 52, 224);
+}
+
+.bottom-ticker {
+    bottom: 0;
+    border-top: 1px solid rgb(98, 52, 224);
+}
+
+.ticker {
+    display: flex;
+    animation: ticker 20s linear infinite; /* Adjust speed as needed */
+}
+
+.ticker__item {
+    padding: 0 20px; /* Adjust padding as needed */
+    font-family: 'Sixtyfour', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    flex-shrink: 0;
+}
+
+.ticker__item img {
+    height: 1.25em; /* Set height relative to the font size */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Vertically align the image with the text */
+    margin: 0 0.25em; /* Add some spacing around the image */
+}
+
+/* Key Change: Remove the translateX and use width calculation in JS */
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50%)); }
+}
